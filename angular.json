@@ -28,16 +28,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
+              "src/assets/lib/bootstrap/dist/css/bootstrap.min.css",
               "src/assets/css/materialize.css",
               "src/assets/css/style.css"
-
             ],
             "scripts": [
-              "src/assets/js/jquery-2.1.1.min.js",
+              "src/assets/lib/jquery/dist/jquery.min.js",
               "src/assets/js/materialize.js",
               "src/assets/js/init.js"
-
             ]
           },
           "configurations": {
