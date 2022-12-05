@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -17,6 +18,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private _http: HttpClient,
+    private _router: Router,
     private _fb: FormBuilder
   ) {
     this.login = _fb.group({
@@ -44,6 +46,7 @@ export class LoginComponent implements OnInit {
           next: (resp: any) => {
             this.disabledSavedButton = false
             // redirect to dashboard
+            this._router.navigateByUrl('dashboard');
           },
           error: (fail: any) => {
             this.disabledSavedButton = false
