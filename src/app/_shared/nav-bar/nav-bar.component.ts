@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor() { }
+  pathImage = 'assets/background1.jpg'
+  constructor() {
+    //assets/background1.jpg
+  }
 
   ngOnInit(): void {
   }

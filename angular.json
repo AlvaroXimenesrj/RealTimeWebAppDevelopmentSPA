@@ -29,8 +29,7 @@
             ],
             "styles": [
               "src/assets/lib/bootstrap/dist/css/bootstrap.min.css",
-              "src/assets/css/materialize.css",
-              "src/assets/css/style.css"
+              "src/assets/css/materialize.css"
             ],
             "scripts": [
               "src/assets/lib/jquery/dist/jquery.min.js",

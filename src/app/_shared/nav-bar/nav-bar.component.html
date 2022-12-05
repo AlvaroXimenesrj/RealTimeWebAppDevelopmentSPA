@@ -1,11 +1,11 @@
 <header>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">
-        <img class="responsive-img" src="assets/images/logo.jpg" alt="Logo" />
+      <a id="logo-container" href="/main" class="brand-logo">
+        <img class="responsive-img" src="assets/images/logo.jpg" alt="Logo" style="visibility: unset !important;"/>
       </a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Login</a></li>
+        <li><a routerLink="./login">Login</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
       <!-- <ul id="nav-mobile" class="side-nav">
@@ -33,6 +33,6 @@
 
       </div>
     </div>
-    <div class="parallax"><img src="assets/background1.jpg" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img [src]="pathImage" alt="Unsplashed background img 1"></div>
   </div>
 </header>
