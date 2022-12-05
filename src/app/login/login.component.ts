@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
         .subscribe({
           next: (resp: any) => {
             this.disabledSavedButton = false
-            // redirect
+            // redirect to dashboard
           },
           error: (fail: any) => {
             this.disabledSavedButton = false
