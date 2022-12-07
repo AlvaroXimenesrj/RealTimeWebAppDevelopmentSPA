@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-forgot',
@@ -33,11 +33,17 @@ export class ForgotComponent implements OnInit {
       this._http.post(``,{})
       .subscribe({
         next:(resp:any) =>{
-          this._router.navigateByUrl('main/forgot-email');
+          const navigationExtras: NavigationExtras = { state: { data: 'forgot' } };
+
+         this._router.navigate(['main/forgot-email'], navigationExtras);
+
+          //this._router.navigateByUrl('main/forgot-email');
         },
         error: (resp:any) => {
           this.disabledbutton = false
-          this._router.navigateByUrl('main/forgot-email');
+          const navigationExtras: NavigationExtras = { state: { data: 'forgot' } };
+
+         this._router.navigate(['main/forgot-email'], navigationExtras);
         }
       })
 

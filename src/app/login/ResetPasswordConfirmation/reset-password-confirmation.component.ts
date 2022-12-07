@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-reset-password-confirmation',
@@ -7,7 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResetPasswordConfirmationComponent implements OnInit {
 
-  constructor() { }
+  public data?: string;
+
+  constructor(
+    private _router: Router
+  ) {
+    const navigation = this._router.getCurrentNavigation();
+    console.log(navigation?.extras['state'])
+    if (navigation?.extras['state'] != undefined) {
+      const state = navigation.extras.state as { data: string };
+      this.data = state.data;
+    }
+  }
 
   ngOnInit(): void {
   }

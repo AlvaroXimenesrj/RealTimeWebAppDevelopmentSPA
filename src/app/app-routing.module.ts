@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ForgotComponent } from './forgot/forgot.component';
+import { ForgotComponent } from './login/forgot/forgot.component';
+
 import { LoginComponent } from './login/login.component';
+import { ResetPasswordComponent } from './login/ResetPassword/reset-password.component';
 import { ResetPasswordConfirmationComponent } from './login/ResetPasswordConfirmation/reset-password-confirmation.component';
 import { HomeComponent } from './_shared/home/home.component';
 import { MainComponent } from './_shared/main/main.component';
@@ -38,7 +40,8 @@ const routes: Routes = [
       { path: '', component: HomeComponent/*, canActivate: [AuthGuard]*/ },
       { path: 'login', component: LoginComponent/*, canActivate: [AuthGuard]*/ },
       { path: 'forgot', component: ForgotComponent },
-      { path: 'forgot-email', component: ResetPasswordConfirmationComponent}
+      { path: 'forgot-email', component: ResetPasswordConfirmationComponent},
+      { path: 'reset-password', component: ResetPasswordComponent }
     ]
   },
   { path: '', redirectTo: 'main', pathMatch: 'full' }
