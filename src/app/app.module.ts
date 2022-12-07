@@ -12,6 +12,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './_shared/material/material.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ForgotComponent } from './forgot/forgot.component';
+import { ResetPasswordConfirmationComponent } from './login/ResetPasswordConfirmation/reset-password-confirmation.component';
+import { ResetPasswordComponent } from './login/ResetPassword/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     NavBarComponent,
     HomeComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    ForgotComponent,
+    ResetPasswordConfirmationComponent,
+    ResetPasswordComponent
   ],
   imports: [
     CommonModule,

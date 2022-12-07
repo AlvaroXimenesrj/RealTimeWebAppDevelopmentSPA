@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+      <div class="col s12 m6 offset-m3">
+          <form [formGroup]="forgotPasswordform" (ngSubmit)="Send()" class="form-horizontal">
+              <div asp-validation-summary="All" class="text-danger"></div>
+              <div class="row" style="margin-top: 15px">
+                  <div class="input-field col s12">
+                      <input formControlName="email" type="email" class="validate">
+                      <label data-error="wrong" data-success="right">Email</label>
+                  </div>
+              </div>
+              <div class="row center">
+                  <button [disabled]="disabledbutton" class="btn waves-effect waves-light" type="submit">
+                      Reset
+                      <i class="material-icons right">send</i>
+                  </button>
+              </div>
+          </form>
+      </div>
+  </div>
+</div>
